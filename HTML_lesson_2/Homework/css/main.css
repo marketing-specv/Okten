@@ -3,6 +3,8 @@
     justify-content: center;
     margin: 20px;
     box-sizing: content-box;
+    width: 800px;
+    justify-items: center;
 }
 
 .widget {
