@@ -1,0 +1,32 @@
+.container {
+
+    justify-content: center;
+    margin: 20px;
+    box-sizing: content-box;
+}
+
+.widget {
+    background: #35ca9e;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    }
+
+.widget-1-2-3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget-small {
+    background: #35ca9e;
+    height: 200px;
+    width: 30%;
+
+    }
+
+.contacts {
+    height: 500px;
+    background: #35ca9e;
+}
