@@ -1,0 +1,15 @@
+.target {
+    background: silver;
+    width: 200px;
+    height: auto;
+    font-size: 16px;
+    text-align: justify;
+    box-sizing: border-box;
+margin: 100px;
+    padding: 10px;
+    padding-top: 20px;
+    border: 10px solid #fee100;
+    border-radius: 20px;
+    box-shadow: #4a266f 10px 10px 100px 10px;
+
+}
