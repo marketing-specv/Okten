@@ -144,6 +144,7 @@ button:hover {
 
 .box:hover {
     background: #035e9c;
+    transition: 200ms;
 }
 
 .avatar {
