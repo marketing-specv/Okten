@@ -1,0 +1,177 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: #35ca9e;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+    color: white;
+    font-family: "Arial";
+    font-size: 19px;
+    font-weight: 600;
+
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+.bg-color {
+ background: #035e9c;
+}
+
+.bg-color-acent {
+ background: #f7d700;
+}
+
+.header-left {
+    margin-left: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 110px;
+    border: 2px solid white;
+}
+
+button:hover {
+    background: #048ce8;
+    transition: 200ms;
+}
+
+.radius {
+    border-radius: 20px;
+}
+
+.header-right {
+    display: flex;
+    margin-right: 20px;
+    column-gap: 20px;
+
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+    height: 300px;
+    width: 100px;
+}
+
+.find-nav {
+    display: flex;
+     height: 40px;
+    }
+
+.find {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    background: white;
+    }
+
+.find:hover {
+    color: white;
+    background: #f7d700;
+    transition: 200ms;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    background: white;
+}
+
+.nav:hover {
+    color: white;
+    background: #f7d700;
+    transition: 200px;
+}
+
+.hero {
+    display: flex;
+    width: 1280px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    bottom: 150px;
+    background:#35ca9e ;
+    }
+
+.box {
+    background: white;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    border-radius: 150px;
+}
+
+.box:hover {
+    background: #035e9c;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: #35ca9e;
+    position: relative;
+    top: 46px;
+
+}
+
+.name {
+    position: relative;
+    top: 70px;
+    text-transform: uppercase;
+    font-family: "Arial Black";
+    font-size: 25px;
+}
+
+.fate {
+
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
