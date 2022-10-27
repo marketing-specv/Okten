@@ -1,0 +1,12 @@
+body {
+    background-image: url("../img/img.png");
+}
+
+.main {
+    display: flex;
+    background: #8fffdf;
+}
+
+.worm:hover {
+    height: 500px;
+}
