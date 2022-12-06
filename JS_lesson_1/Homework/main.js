@@ -27,7 +27,7 @@ console.log(13);
 
 let firstName = 'Volodymyr ';
 let middleName = 'Urijovich';
-let lastName = 'Lazarchuk';
+let lastName = ' Lazarchuk';
 console.log(firstName + middleName + ' ' + lastName);
 
 let a = 100;
@@ -37,4 +37,10 @@ console.log(typeof b);
 let c = true;
 console.log(typeof c);
 
-prompt('my name is '+ firstName + middleName, '...and your`s?')
+console.log('11' + 1);
+console.log('11' - 1);
+console.log("2" + "2" - "2")
+
+
+let x = prompt('my name is '+ firstName + middleName, '...and your`s?');
+console.log(x + lastName)

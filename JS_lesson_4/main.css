@@ -1,0 +1,25 @@
+/*.main {*/
+/*    display: flex;*/
+/*    width: 500px;*/
+/*    justify-content: space-around;*/
+/*    flex-wrap: wrap;*/
+/*    background: #048ce8;*/
+
+/*}*/
+
+/*.product-card > h3{*/
+
+/*    background: #8fffdf;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    }*/
+
+
+/*img {*/
+/*    !*width: 200px;*!*/
+/*    height: 200px;*/
+/*}*/
+
+.card {
+    border: thin solid gray;
+}
