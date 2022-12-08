@@ -73,31 +73,40 @@ let coursesArray = [
     }
 ];
 
-let allCourses = document.getElementsByClassName('courses')[0];
-let courseCard = document.getElementsByClassName('courseCard')[0]
-let ul = document.getElementsByClassName('ul')[0];
-
 for (const courseItem of coursesArray) {
-    let div = document.createElement('div')
-    div.classList.add('courseCard')
-    div.innerHTML = `<h2>${courseItem.title}</h2>`
-    courseCard.append(div)
+    let courseCard = document.createElement('div')
+    courseCard.classList.add('courseCard')
 
-    let divDuration = document.createElement('div')
-    divDuration.classList.add('duration')
+    let h2 = document.createElement('h2')
+    h2.innerHTML = `<h2>${courseItem.title}</h2>`
 
-    divDuration.innerHTML = `
-    <div>Тривалість курсу: ${courseItem.monthDuration} місяців</div>
-    <div>А саме ${courseItem.hourDuration} годин</div>`
-    courseCard.append(divDuration)
+    let durationBlock = document.createElement('div')
+    durationBlock.classList.add('durationBlock')
 
-    let divModules = document.createElement('ul')
-    divModules.classList.add('modulesUl')
-    for (const moduleItem of courseItem.modules) {
-        let li = document.createElement('li')
-        li.innerText = `-- ${moduleItem}`
-        courseCard.append(li)
-    }
+
+    let durationMonth = document.createElement('div')
+        durationMonth.classList.add('durationMonth')
+        durationMonth.innerHTML = `Тривалість: ${courseItem.monthDuration} місцяів`
+
+    let durationHours = document.createElement('div')
+        durationHours.classList.add('durationHours')
+        durationHours.innerText = `${courseItem.hourDuration} годин відбірної гідноти!`
+
+     durationBlock.append(durationMonth,durationHours)
+
+
+    let modulesUl = document.createElement('ul')
+
+    for (const module of courseItem.modules) {
+        let moduleLi = document.createElement('li')
+        moduleLi.innerText = module
+        modulesUl.appendChild(moduleLi)
+        }
+    courseCard.append(h2,durationBlock,modulesUl)
+
+    document.body.appendChild(courseCard)
+
+
 }
 
 
