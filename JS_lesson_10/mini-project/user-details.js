@@ -103,7 +103,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
         let target = document.getElementsByClassName('target');
         let buttonClick = document.getElementsByClassName('btn');
-        buttonClick[0].onclick = function () {
+        buttonClick.onclick = function () {
             fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                 .then(value => value.json())
                 .then(posts => {
