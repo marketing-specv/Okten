@@ -1,7 +1,6 @@
 let url = new URL(location.href);
-console.log(url);
 let id = url.searchParams.get('id');
-console.log(id);
+let userPostId = url.searchParams.get('userPostId')
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
     .then(resp => resp.json())
@@ -9,7 +8,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         let ul = document.createElement('ul')
         for (const post of posts) {
             let li = document.createElement('li');
-            li.innerText = post.title;
+            li.classList.add('text');
+            li.classList.add('line2')
+            li.innerHTML = `* ${post.title}`;
             ul.appendChild(li)
         }
         document.body.appendChild(ul)

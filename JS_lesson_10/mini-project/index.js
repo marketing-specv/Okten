@@ -9,10 +9,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
             div.innerHTML = `${user.id} ${user.name} - `;
             let a = document.createElement('a');
             // a.classList.add('text')
-            a.classList.add('line3')
-            a.innerHTML = '*user Details>>><span class="cursor1">_</span>'
+            a.classList.add('line3');
+            a.innerHTML = '*user Details>>>';
             a.href = `user-details.html?id=${user.id}`;
-            div.append(a)
+            div.append(a);
             document.body.append(div);
         }
     })
