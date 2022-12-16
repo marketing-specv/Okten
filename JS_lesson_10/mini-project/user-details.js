@@ -110,7 +110,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                     for (const post of posts) {
                         let postDiv = document.createElement('div');
                         postDiv.classList.add('text');
-                        postDiv.classList.add('line4');
+                        postDiv.classList.add('line3');
                         postDiv.innerText = `* ${post.title}`;
                         document.body.appendChild(postDiv)
                     }
