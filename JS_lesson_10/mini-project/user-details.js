@@ -28,6 +28,8 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         username.classList.add('line2')
         username.innerHTML = `username: ${user.username} <br>--------<br><br>`;
 
+            usernameIdDiv.append(id, username)
+
         let email = document.createElement('div');
         email.classList.add('email');
         email.classList.add('text');
@@ -74,11 +76,14 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         lng.classList.add('lng');
         lng.innerHTML = `lng: ${user.address.geo.lng}<br>--------<br><br>`;
 
+        geo.append(lat, lng);
+        address.append(zipcodeCity, streetSuite, geo);
+
         let companyName = document.createElement('div');
         companyName.classList.add('company');
         companyName.classList.add('text');
         companyName.classList.add('line3');
-        companyName.innerText = `${user.company.name} LLC., B.V.`;
+        companyName.innerText = `${user.company.name.toUpperCase()} LLC., B.V.`;
 
         let catchPhrase = document.createElement('div');
         catchPhrase.classList.add('catchPhrase');
@@ -93,38 +98,43 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         bs.innerHTML = `${user.company.bs}<br>--------<br><br>`;
 
 
-        let button = document.createElement('button');
-        button.classList.add('btn');
-        button.innerHTML = `-----------------<br>* Inspect POSTS *<br>-----------------`;
+
+            let divPosts = document.createElement('div');
+            divPosts.classList.add('target');
+
+            let button = document.createElement('button');
+            button.classList.add('button');
+            button.innerHTML = `-----------------<br>* Inspect POSTS *<br>-----------------`;
+
+            div.append(h2Name, usernameIdDiv, phone, email, website, address, companyName, catchPhrase, bs,divPosts,button)
+            document.body.appendChild(div);
 
 
-        let targetDiv = document.createElement('div');
-        targetDiv.classList.add('target');
-
-        let target = document.getElementsByClassName('target');
-        let buttonClick = document.getElementsByClassName('btn');
-        buttonClick.onclick = function () {
-            fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-                .then(value => value.json())
-                .then(posts => {
-                    for (const post of posts) {
-                        let postDiv = document.createElement('div');
-                        postDiv.classList.add('text');
-                        postDiv.classList.add('line3');
-                        postDiv.innerText = `* ${post.title}`;
-                        document.body.appendChild(postDiv)
-                    }
-
-                })
-        }
+            let target = document.querySelector('.target');
+            let btn = document.querySelector('.button');
+            btn.onclick = function () {
+                    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+                        .then(value => value.json())
+                        .then(posts => {
+                                for (const post of posts) {
+                                        let postDiv = document.createElement('div');
+                                        postDiv.innerText  = `${post.id}. ${post.title}`;
+                                        let a = document.createElement('a');
+                                        a.innerText = '*Post DETAILS*'
+                                        a.href = 'post-details.html'
+                                        btn.appendChild(postDiv)
+                                        a.appendChild(btn)
+                                        document.body.appendChild(a, btn)
+                                }
 
 
-        // a.append(button)
-        geo.append(lat, lng);
-        address.append(zipcodeCity, streetSuite, geo)
-        usernameIdDiv.append(id, username)
-        div.append(h2Name, usernameIdDiv, phone, email, website, address, companyName, catchPhrase, bs, button)
+                        })
+            }
 
 
-        document.body.appendChild(div);
+
+
+
+       document.body.appendChild(div);
     })
+

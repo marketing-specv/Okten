@@ -48,10 +48,10 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: underline;}
-a:active {text-decoration: underline;}
+/*a:link {text-decoration: none;}*/
+/*a:visited {text-decoration: none;}*/
+/*a:hover {text-decoration: underline;}*/
+/*a:active {text-decoration: underline;}*/
 
 .text {
     width: 90%;
@@ -65,7 +65,7 @@ a:active {text-decoration: underline;}
     white-space: normal;
     overflow: hidden;
     width: 0;
-    -webkit-animation: type .5s 1s steps(20, end)
+    animation: type .5s 1s steps(20, end)
 }
 
 span {
@@ -75,65 +75,41 @@ span {
 
 .line1 {
     color: #9CD9F0;
-    -webkit-animation: type .5s 1s steps(20, end) forwards;
-    -moz-animation: type .5s 1s steps(20, end) forwards;
-    -o-animation: type .5s 1s steps(20, end) forwards;
     animation: type .5s 1s steps(20, end) forwards;
 }
 
 .cursor1 {
-    -webkit-animation: blink 1s 2s 2 forwards;
-    -moz-animation: blink 1s 2s 2 forwards;
-    -o-animation: blink 1s 2s 2 forwards;
     animation: blink 1s 2s 2 forwards;
 }
 
 .line2 {
     color: lightgreen;
-    -webkit-animation: type .5s 4s steps(20, end) forwards;
-    -moz-animation: type .5s 4s steps(20, end) forwards;
-    -o-animation: type .5s 4s steps(20, end) forwards;
     animation: type .5s 4s steps(20, end) forwards;
 }
 
 .cursor2 {
-    -webkit-animation: blink 1s 3s 10 forwards;
-    -moz-animation: blink 1s 3s 10 forwards;
-    -o-animation: blink 1s 3s 10 forwards;
     animation: blink 1s 3s 10 forwards;
 }
 
 .line3 {
     color: #E09690;
-    -webkit-animation: type .5s 4.5s steps(20, end) forwards;
-    -moz-animation: type .5s 4.5s steps(20, end) forwards;
-    -o-animation: type .5s 4.5s steps(20, end) forwards;
     animation: type .5s 4.5s steps(20, end) forwards;
 }
 
 .cursor3 {
-    -webkit-animation: blink 1s 3.5s 2 forwards;
-    -moz-animation: blink 1s 3.5s 2 forwards;
-    -o-animation: blink 1s 3.5s 2 forwards;
     animation: blink 1s 3.5s 2 forwards;
 }
 
 .line4 {
     color: #fff;
-    -webkit-animation: type .5s 10.75s steps(20, end) forwards;
-    -moz-animation: type .5s 10.75s steps(20, end) forwards;
-    -o-animation: type .5s 10.75s steps(20, end) forwards;
     animation: type .5s 10.75s steps(20, end) forwards;
 }
 
 .cursor4 {
-    -webkit-animation: blink 1s 11.5s infinite;
-    -moz-animation: blink 1s 8.5s infinite;
-    -o-animation: blink 1s 8.5s infinite;
     animation: blink 1s 8.5s infinite;
 }
 
-button {
+.button {
     background-color: #151515;
     color: lightgreen;
     border: none;
@@ -147,65 +123,8 @@ button {
     font-weight: bold;
     white-space: normal;
     overflow: hidden;
-    -webkit-animation: blink 1s 5.5s infinite;
-    -moz-animation: blink 1s 5.5s infinite;
-    -o-animation: blink 1s 5.5s infinite;
     animation: blink 1s 5.5s infinite;
 
-}
-
-@-webkit-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-moz-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-o-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 @keyframes blink {
@@ -223,24 +142,6 @@ button {
     }
     100% {
         opacity: 0;
-    }
-}
-
-@-webkit-keyframes type {
-    to {
-        width: 90%;
-    }
-}
-
-@-moz-keyframes type {
-    to {
-        width: 90%;
-    }
-}
-
-@-o-keyframes type {
-    to {
-        width: 90%;
     }
 }
 
