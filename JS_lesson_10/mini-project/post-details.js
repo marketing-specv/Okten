@@ -31,7 +31,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${userPostId}`)
                     commentDiv.classList.add('fakeScreen');
                     commentDiv.classList.add('text');
                     commentDiv.classList.add('line4')
-                    commentDiv.innerHTML = `CommentName: ${comment.name}<br>Email: ${comment.email}<br>Body: ${comment.body}`;
+                    commentDiv.innerHTML = `---COMMENT---<br>CommentName: ${comment.name}<br>Email: ${comment.email}<br>Body: ${comment.body}`;
                     document.body.appendChild(commentDiv)
             }
     }))
