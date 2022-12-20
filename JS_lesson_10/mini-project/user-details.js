@@ -104,7 +104,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             button.classList.add('button');
             button.innerHTML = `-----------------<br>* Inspect POSTS *<br>-----------------`;
             button.onclick = function () {
-                    console.log('hello');
+                    // console.log('hello');
                           fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                         .then(value => value.json())
                         .then(posts => {
@@ -127,7 +127,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
                         })}
 
-            console.log(button);
+
 
             div.append(h2Name, usernameIdDiv, phone, email, website, address, companyName, catchPhrase, bs,button,divPosts)
             document.body.appendChild(div);
