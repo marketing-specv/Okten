@@ -1,5 +1,5 @@
 let url = new URL(location.href);
-let id = url.searchParams.get('id');
+const id = url.searchParams.get('id');
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(resp => resp.json())
@@ -16,11 +16,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         let usernameIdDiv = document.createElement('div');
         usernameIdDiv.classList.add('usernameIdDiv');
 
-        let id = document.createElement('div');
-        id.classList.add('id');
-        id.classList.add('text');
-        id.classList.add('line2')
-        id.innerText = `id: ${user.id}`;
+        let idDiv = document.createElement('div');
+        idDiv.classList.add('id');
+        idDiv.classList.add('text');
+        idDiv.classList.add('line2');
+        idDiv.innerText = `id: ${user.id}`;
 
         let username = document.createElement('div');
         username.classList.add('username');
@@ -28,7 +28,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         username.classList.add('line2')
         username.innerHTML = `username: ${user.username} <br>--------<br><br>`;
 
-            usernameIdDiv.append(id, username)
+            usernameIdDiv.append(idDiv, username)
 
         let email = document.createElement('div');
         email.classList.add('email');
@@ -97,44 +97,40 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         bs.classList.add('line3');
         bs.innerHTML = `${user.company.bs}<br>--------<br><br>`;
 
-
-
-            let divPosts = document.createElement('div');
+        let divPosts = document.createElement('div');
             divPosts.classList.add('target');
 
-            let button = document.createElement('button');
+        let button = document.createElement('button');
             button.classList.add('button');
             button.innerHTML = `-----------------<br>* Inspect POSTS *<br>-----------------`;
-
-            div.append(h2Name, usernameIdDiv, phone, email, website, address, companyName, catchPhrase, bs,divPosts,button)
-            document.body.appendChild(div);
-
-
-            let target = document.querySelector('.target');
-            let btn = document.querySelector('.button');
-            btn.onclick = function () {
-                    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+            button.onclick = function () {
+                    console.log('hello');
+                          fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                         .then(value => value.json())
                         .then(posts => {
                                 for (const post of posts) {
                                         let postDiv = document.createElement('div');
-                                        postDiv.innerText  = `${post.id}. ${post.title}`;
-                                        let a = document.createElement('a');
-                                        a.innerText = '*Post DETAILS*'
-                                        a.href = 'post-details.html'
-                                        btn.appendChild(postDiv)
-                                        a.appendChild(btn)
-                                        document.body.appendChild(a, btn)
+                                        postDiv.classList.add('postDiv');
+                                        postDiv.classList.add('userCard');
+                                        postDiv.classList.add('text');
+                                        postDiv.classList.add('line1');
+                                        postDiv.innerText = `${post.id} - ${post.title}`;
+
+                                        const postDivAhref = document.createElement('a');
+                                        postDivAhref.href = `post-details.html?id=${id}&userPostId=${post.id}`
+
+                                        postDivAhref.appendChild(postDiv)
+
+                                        div.appendChild(postDivAhref);
                                 }
 
 
-                        })
-            }
+                        })}
 
+            console.log(button);
 
+            div.append(h2Name, usernameIdDiv, phone, email, website, address, companyName, catchPhrase, bs,button,divPosts)
+            document.body.appendChild(div);
 
-
-
-       document.body.appendChild(div);
+            document.body.appendChild(div);
     })
-
