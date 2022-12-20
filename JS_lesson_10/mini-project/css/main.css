@@ -95,7 +95,7 @@ body {
 }
 
 .cursor4 {
-    animation: blink 1s 8.5s infinite;
+    animation: blink 1s 1.5s infinite;
 }
 span {
     color: #fff;

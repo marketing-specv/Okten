@@ -23,7 +23,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${userPostId}`)
     })
     .then(fetch(`https://jsonplaceholder.typicode.com/posts/${userPostId}/comments`)
     .then(resonse => resonse.json())
-    .then (comments => {
+    .then(comments => {
             // console.log(comments);
             for (const comment of comments) {
                     // console.log(comment.body);
