@@ -104,8 +104,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             button.classList.add('button');
             button.innerHTML = `-----------------<br>* Inspect POSTS *<br>-----------------`;
             button.onclick = function () {
-                    // console.log('hello');
-                          fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+                         fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                         .then(value => value.json())
                         .then(posts => {
                                 for (const post of posts) {
